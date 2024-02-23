@@ -55,3 +55,7 @@ A komment objektumként tárolva: {"name":"íéáőúűóüööüóúőűáéí"
 Ekkor készült/timestamp: 2024-02-15 09:41:03.3
 A komment objektumként tárolva: {"name":"íííííííííííí","email":"de@de.de","content":"öööööööööööööö"}
 Ekkor készült/timestamp: 2024-02-15 14:04:05.5
+A komment objektumként tárolva: {"name":"íííííííííííí","email":"de@de.de","content":"\r\nííííííííííí\r\nööööööööööööö\r\nüüüüüüüüüüüüüüü\r\nááááááááááá\r\n\r\n\r\níéáőúűóüööüóúőűáéí\r\nÁrvíztűrő tükörfúrógép\r\n\r\n"}
+Ekkor készült/timestamp: 2024-02-19 21:25:12.5
+A komment objektumként tárolva: {"name":"íííííííííííí","email":"de@de.de","content":"\r\nííííííííííí\r\nööööööööööööö\r\nüüüüüüüüüüüüüüü\r\nááááááááááá\r\n\r\n\r\níéáőúűóüööüóúőűáéí\r\nÁrvíztűrő tükörfúrógép\r\n\r\n"}
+Ekkor készült/timestamp: 2024-02-19 21:27:13.5
