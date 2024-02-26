@@ -35,11 +35,11 @@ Az ${req.connection.remoteAddress} IP címről új LÁTOGATÁS történt\n`)
             const {name, email, content} = querystring.parse(sent)
             const sent222 = {name, email, content}
             log('sent222 sent222 sent222: ', sent222)
-            this.logEntry('/access.log', req, sent222); // itt módosítás
-
             // Erre nem tudtam rájönni magamtól hogy ide kell áthelyezni ezt a fv-t: 
             // plusz még hogy így kell hivatkoni rá: this.logEntry
             // eredeti ötletem: utilities.logEntry
+            this.logEntry('/access.log', req, sent222); // itt a módosítás
+
             fs.appendFile(filename, `${name};${email};${content}\n`, (err) => {
             
                 if (!err) {
