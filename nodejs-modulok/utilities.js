@@ -6,13 +6,33 @@ const querystring = require('querystring')
 
 module.exports = {
 
+    createList: function (data) {
+        const rows = data.toString().split("\n")
+        log ('az egész fájl tartalma: rows változó: ' , rows)
+        let lista = ''
+
+        rows.forEach( comment => {
+            if (comment.length > 0) {
+                const [name, email, content] = comment.split(";")
+                lista += `<div>
+                            <h4>${name}</h4>
+                            <p>${email}</p>
+                            <q>${content}</q>
+                            <hr>
+                          </div>`
+            }
+        })
+        // log('LISTA: ', lista)
+        return lista
+    },
+
     logVisit: function (filename, req, res, data, lista) {
         try {
             fs.appendFileSync(__dirname + filename, `[${new Date().toLocaleString('hu-HU')}]
 Az ${req.connection.remoteAddress} IP címről új LÁTOGATÁS történt\n`)
         }
         catch (e) {
-            log(e)
+            log(`Hiba a logVisit() function során, hiba:, ${e}`)
         }
         res.end(data.toString().replace('{list}', lista))
     },
@@ -26,7 +46,7 @@ Az ${req.connection.remoteAddress} IP címről új LÁTOGATÁS történt\n`)
 
         }
         catch (e) {
-            log('Hiba a logEntry: function során')
+            log(`Hiba a logEntry() function során, hiba:, ${e}`)
         }
     },
 
